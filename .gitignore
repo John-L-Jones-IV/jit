@@ -1,0 +1,11 @@
+init_sandbox/
+.jit/
+**__pycache__**
+*.vim
+*.venv/
+*.venv-backup/
+*.pyc
+.python-version
+**nohup.out
+**tmux**.log
+**/.tmp/
