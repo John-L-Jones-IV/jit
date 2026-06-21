@@ -1,18 +1,22 @@
 # jit
-Jit - ~~Janky git.~~ A version control system writen in python that has byte-for-byte compatability with git's hash-index object data base.
+jit - ~~Janky git.~~ A version control system writen in python that has byte-for-byte compatability with git's hash-index object data base.
 
 This is an educational project for understanding the internals of git.
 
-"If you know the internals of git you have intuition for what git commands must exist and how to use them" -Something that might have been said at a Tech Talk once.
+> "If you know the internals of git you have intuition for what git commands must exist and how to use them"
+ 
+-Something I might have been heard at a Tech Talk once.
 
-## How to setup
-
-git clone
-
+## Setup
+```
+git clone https://github.com/John-L-Jones-IV/jit.git
+```
+```
 source addJitToPath.sh
-Note: this will need to be ran on every new terminal. Jit does not intend to crowd your working path.
-
-jit
+```
+Note: By default jit does not intend to crowd your working `PATH`. To use and test jit you will need to add the path to add `./bin/jit` to your path with every new terminal.
+```
+term@unixlike:~/jit$ jit
 Usage: jit <command> [<args>]
 
 Available commands:
@@ -20,14 +24,14 @@ Available commands:
   add        Add file contents to the staging area
   commit     Record changes to the repository
   status     Show the working tree status
-
+```
 
 Happy hacking!
 
 
 ## Code Testing
-Just like real git, a test suite is in the 't/' directory. If your system has a bash interpretor you can also use status.sh
-
+Just like real git, a test suite is in the `'t/'` directory. If your system has a bash interpretor you can  run `status.sh` to execute the unit tests in addition to mypy and ruff check.
+```
 mypy:
 Success: no issues found in 10 source files
 
@@ -48,4 +52,4 @@ test1 (test_relative_paths.TestRelativeDirectories.test1) ... ok
 Ran 8 tests in 1.416s
 
 OK
-
+```
