@@ -30,7 +30,7 @@ Happy hacking!
 
 
 ## Code Testing
-Just like real git, a test suite is in the `'t/'` directory. If your system has a bash interpretor you can  run `status.sh` to execute the unit tests in addition to mypy and ruff check.
+Just like real git, a test suite is in the `'t/'` directory. If your system has a bash interpreter you can  run `status.sh` to execute the unit tests in addition to mypy and ruff check.
 ```
 mypy:
 Success: no issues found in 10 source files
@@ -49,7 +49,13 @@ test0 (test_relative_paths.TestRelativeDirectories.test0) ... ok
 test1 (test_relative_paths.TestRelativeDirectories.test1) ... ok
 
 ----------------------------------------------------------------------
+
 Ran 8 tests in 1.416s
 
 OK
 ```
+
+## Notes on the dev env
+* Ubuntu 24.04.4 LTS
+* python interpreter: uv 0.11.16 (x86_64-unknown-linux-gnu)
+* package dependencies listed in `uv.lock`
