@@ -125,7 +125,7 @@ def odb_path(hash_key):
 
 
 def write_index_to_odb(index):
-    tree: dict= {'type': 'tree',
+    tree: dict = {'type': 'tree',
             'mode': '040000',
             'hashkey': None,
             'children': {},}

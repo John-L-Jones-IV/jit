@@ -16,7 +16,6 @@ TEMPLATES_DIR = PROJECT_DIR / Path('t/testfiletemplates')
 class TestHarness(unittest.TestCase):
     def setUp(self):
         os.environ['PATH'] = '/home/best/Projects/jit/bin:' + os.environ['PATH']
-        # TODO: does path get cleared or does it grow every time?
         if TESTING_DIR.exists():
             shutil.rmtree(TESTING_DIR)
         shutil.copytree(TEMPLATES_DIR, TESTING_DIR)
@@ -214,7 +213,7 @@ def _get_commit_hash_from_head(head_path: Path) -> str:
 
 
 def _commit_contents_from_hash(folder: str, hashkey: str) -> dict[str, str]:
-    commit_contents = {}
+    commit_contents: dict = {}
     obj_path = Path(folder)/Path(hashkey[:2])/Path(hashkey[2:].strip())
     with open(obj_path, 'rb') as f:
         buf = f.read()

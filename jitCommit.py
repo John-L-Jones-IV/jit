@@ -112,9 +112,6 @@ def commit(args) -> int:
         f.write('\n')
     return 0
 
-def get_head_thashkey2(jit_repo_dir: Path) -> Optional[str]:
-    head_file_path = Path(jit_repo_dir) / Path('.jit/HEAD')
-    print(head_file_path)
 
 def get_head_thashkey(jit_repo_dir: Path) -> Optional[str]:
     head = jit_repo_dir / Path('.jit/HEAD')
