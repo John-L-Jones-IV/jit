@@ -1,5 +1,5 @@
 # jit
-jit - ~~Janky git.~~ A version control system written in python that has byte-for-byte compatability with git's hash-index object data base.
+jit - ~~Janky git.~~ A version control system written in python that has byte-for-byte compatability with git's hash-index object database.
 
 This is an educational project for understanding the internals of git.
 
